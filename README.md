@@ -46,11 +46,11 @@ Add the following XML to the Maui csproj file. Use the thumbprint copied from th
 
 ## Publish dotnet application from VS2022:
 
-Use the following command from the VS command prompt to publish using dotnet. Be sure to replace the "-f" parameter with the net6.0-windows10{version} found in the csproj. Look for the `<TargetFrameworks>` tags
+Use the following command from the VS command prompt to publish using dotnet. Be sure to replace the "-f" parameter with the net6.0-windows10{version} found in the csproj. Look for the `<TargetFrameworks>` tags to get the version used by the application:
 
 `dotnet publish -f net6.0-windows10.0.19041.0 -c Release /p:RuntimeIdentifierOverride=win10-x64`
 
-Successfully publishing the app will result in the MSIX file being placed in the bin folder of the project; specifically: bin\Release\net6.0-windows10.0.19041.0\win10-x64\AppPackages\<appname>\.
+Successfully publishing the app will result in the MSIX file being placed in the bin folder of the project; specifically: bin\Release\net6.0-windows10.0.19041.0\win10-x64\AppPackages\\{appname}\\.
 
 ---
 
