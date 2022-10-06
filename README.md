@@ -30,7 +30,7 @@ New-SelfSignedCertificate -Type Custom `
 
 ## Modifying the csproj file for deployment:
 
-Add the following XML to the Maui csproj file. Use the thumbprint copied from the last section in the <PackageCertificateThumbprint> when copying.
+Add the following XML to the Maui csproj file. Use the thumbprint copied from the last section in the `<PackageCertificateThumbprint>` when copying.
 
 ```
 <PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows' and '$(Configuration)' == 'Release'">
